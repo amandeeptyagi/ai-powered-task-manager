@@ -1,0 +1,32 @@
+.env
+
+# Node modules
+backend/node_modules/
+
+# Environment variables
+backend/.env
+
+# Build outputs
+backend/dist/
+
+# Docker
+backend/.dockerignore
+backend/docker-compose.override.yml
+
+#prisma
+backend/generated/prisma
+
+
+# Node modules
+frontend/node_modules/
+
+# Environment variables
+frontend/.env
+
+# Next.js build output
+frontend/.next/
+frontend/out/
+
+# Docker
+frontend/.dockerignore
+frontend/docker-compose.override.yml
