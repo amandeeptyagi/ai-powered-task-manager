@@ -14,7 +14,7 @@ const router = express.Router();
 router.post("/register", userRegister);
 
 //auth middleware
-router.use(protect, allowRoles("user"));
+router.use(protect, allowRoles("USER"));
 
 // PROFILE
 router.delete("/delete-profile", deleteUserProfile)

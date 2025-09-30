@@ -23,7 +23,7 @@ export const userRegister = asyncHandler(async (req, res) => {
       name,
       email,
       password: hashedPassword,
-      role: "user",
+      role: "USER",
     },
   });
   generateToken(res, user.id, user.role, user.name);
@@ -44,5 +44,12 @@ export const deleteUserProfile = asyncHandler(async (req, res) => {
       id: req.user.id,
     },
   });
-  res.json({ message: "User profile deleted", user: user });
+  res.json({
+    message: "User profile deleted",
+    user: {
+      id: user.id,
+      name: user.name,
+      role: user.role,
+    }
+  });
 });
