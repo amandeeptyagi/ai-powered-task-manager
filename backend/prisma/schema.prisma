@@ -28,7 +28,7 @@ model Task {
   id          String    @id @default(uuid())
   title       String
   description String
-  status      Status    @default(TODO)
+  status      Status    @default(TO_DO)
   userId      String
   user        User      @relation(fields: [userId], references: [id])
   subtasks    SubTask[]
@@ -47,7 +47,7 @@ enum Role {
 }
 
 enum Status {
-  TODO
+  TO_DO
   IN_PROGRESS
   DONE
 }

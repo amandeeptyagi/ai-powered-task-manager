@@ -8,6 +8,7 @@ import { notFound } from "./middleware/notFound.js";
 import authRoutes from './routes/authRoutes.js'
 import userRoutes from './routes/userRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
+import taskRoutes from './routes/taskRoutes.js';
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use(cors({
 app.use('/api', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/task', taskRoutes);
 
 // Error handler (last middlewares)
 app.use(notFound);
