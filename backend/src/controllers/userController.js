@@ -44,6 +44,14 @@ export const deleteUserProfile = asyncHandler(async (req, res) => {
       id: req.user.id,
     },
   });
+
+  // clear cookies
+  res.clearCookie("token", {
+    httpOnly: true,
+    secure: false,
+    sameSite: "strict",
+  });
+
   res.json({
     message: "User profile deleted",
     user: {

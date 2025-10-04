@@ -30,7 +30,7 @@ model Task {
   description String
   status      Status    @default(TO_DO)
   userId      String
-  user        User      @relation(fields: [userId], references: [id])
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   subtasks    SubTask[]
 }
 
@@ -38,7 +38,7 @@ model SubTask {
   id      String @id @default(uuid())
   title   String
   taskId  String
-  task    Task   @relation(fields: [taskId], references: [id])
+  task    Task   @relation(fields: [taskId], references: [id], onDelete: Cascade)
 }
 
 enum Role {
