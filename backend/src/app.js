@@ -5,7 +5,7 @@ import { errorHandler } from "./middleware/errorHandler.js";
 import { notFound } from "./middleware/notFound.js";
 
 // route files
-import authRoutes from './routes/authRoutes.js'
+import authRoutes from './routes/authRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
 import taskRoutes from './routes/taskRoutes.js';

@@ -29,14 +29,21 @@ export const getUserTasks = async (req, res) => {
 
     const tasks = await prisma.task.findMany({
       where: { userId },
-      include: { subtasks: true },
+      select: {
+        id: true,
+        title: true,
+        status: true,
+        userId: true,
+      },
     });
 
     res.json(tasks);
   } catch (error) {
+    console.error('Error fetching tasks:', error);
     res.status(500).json({ error: 'Failed to fetch tasks' });
   }
 };
+
 
 // Get single task (only if belongs to user)
 export const getTaskById = async (req, res) => {

@@ -20,6 +20,9 @@ backend/generated/prisma
 # Node modules
 frontend/node_modules/
 
+# Build outputs
+frontend/dist/
+
 # Environment variables
 frontend/.env
 
