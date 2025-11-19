@@ -39,12 +39,13 @@ docker-compose down
 ---
 
 ## Project Structure
-
+```
 root/
 │── backend/
 │── frontend/
 │── docker-compose.yml
 └── README.md
+```
 
 ---
 
